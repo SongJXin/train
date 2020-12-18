@@ -1,2 +1,2 @@
 FROM busybox
-RUN wget https://doc-0s-90-docs.googleusercontent.com/docs/securesc/pl4bjpaqbig4fpijblnt97or87kdn8f4/u95j3v77fo75u3fhguknqcber4f0jvqn/1608263400000/15382047144543476470/07924506208738640399/0B3TtLmV-bYCeaTZwNFJveWVrVTQ?e=download&authuser=0&nonce=n81bc1h9p5ivs&user=07924506208738640399&hash=mm4r8gitj0rioesgi9k2h19npttlum0v
+RUN curl -H "Authorization: Bearer ya29.a0AfH6SMAQl9aAjeGJVUMIv5xm8cwOF8fxOErcummj_IKF1owrzySwLMljnRlcDzWCxr-pJ0gI4LvSCzvbFBF6SsSEh8N5stVMNpioUypyvtScohdu61E1086rIPjYf81Sc03yQXjteylhF_QKLjQ4nN07lpskLpjJhT5QW2uYdD4" https://www.googleapis.com/drive/v3/files/0B3TtLmV-bYCeaTZwNFJveWVrVTQ?alt=media -o train.tgz
