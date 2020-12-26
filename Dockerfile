@@ -1,2 +1,6 @@
-FROM busybox
-RUN wget https://doc-0s-90-docs.googleusercontent.com/docs/securesc/pl4bjpaqbig4fpijblnt97or87kdn8f4/5jolhdtt1gl4g777l0nen3p98t21l3p0/1608262200000/15382047144543476470/07924506208738640399/0B3TtLmV-bYCeaTZwNFJveWVrVTQ?e=download&authuser=0&nonce=1b5tog46e0vfk&user=07924506208738640399&hash=a6ug80od7e2fmuo4s34gjfhop34jkf0l
+FROM python
+COPY main.py /main.py
+COPY list /list
+RUN for i in `cat list`; do curl http://image-net.org/api/text/imagenet.synset.geturls?wnid=$i > $i; done
+RUN pip install requests
+RUN python /main.py
