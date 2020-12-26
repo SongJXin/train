@@ -5,8 +5,7 @@ from multiprocessing import Process
 
 def downloadImg(img_url, fileLocation):
     print(img_url)
-    proxies = {'http': 'http://localhost:9090', 'https': 'http://localhost:9090'}
-    r = requests.get(img_url, proxies=proxies,verify=False,stream=True)
+    r = requests.get(img_url, verify=False,stream=True)
     fileName = img_url.split('/')[-1][:-1]
     print(fileName)
     print(r.status_code)  # 返回状态码
