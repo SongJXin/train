@@ -1,2 +1,21 @@
-FROM busybox
-RUN wget https://doc-0s-90-docs.googleusercontent.com/docs/securesc/pl4bjpaqbig4fpijblnt97or87kdn8f4/5jolhdtt1gl4g777l0nen3p98t21l3p0/1608262200000/15382047144543476470/07924506208738640399/0B3TtLmV-bYCeaTZwNFJveWVrVTQ?e=download&authuser=0&nonce=1b5tog46e0vfk&user=07924506208738640399&hash=a6ug80od7e2fmuo4s34gjfhop34jkf0l
+FROM amazon/aws-cli
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_0.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_1.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_2.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_3.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_4.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_5.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_6.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_7.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_8.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_9.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_a.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_b.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_c.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_d.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_e.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/train_f.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/validation.tar.gz ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/test.tar.gz ./
+RUN aws s3 --no-sign-request sync s3://open-images-dataset/challenge2018 ./
+RUN aws s3 --no-sign-request cp s3://open-images-dataset/tar/challenge2018.tar.gz ./
